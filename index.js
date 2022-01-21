@@ -236,12 +236,12 @@ class ProjectManager extends Instructor {
      this.favInstructor = attributes.favInstructor;
    }
 
-   standUp(object) {
-    return `${object.name} announces to ${object.channel}, @channel standy times!`
+   standUp(channel) {
+    return `${this.name} announces to ${channel}, @channel standy times!`
    }
 
-   debugsCode(student) {
-     return `${this.name} debugs ${student.name}'s code on ${this.subject}`
+   debugsCode(student, subject) {
+     return `${this.name} debugs ${student.name}'s code on ${subject}`
    }
 }
 
@@ -264,7 +264,7 @@ const slack = {
   channel: "123"
 }
 
-console.log(vanessa.standUp(slack))
+console.log(vanessa.standUp('web52'))
 
 
 /*
